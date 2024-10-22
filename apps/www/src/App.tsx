@@ -1,6 +1,13 @@
+import { useState } from "react";
+import { Input } from "~/components/Input";
+
 function App() {
+    const [input, setInput] = useState("");
+    const handleSubmit = (e) =>{
+        e.preventDefault();
+    }
     return (
-        <>
+        <main className="p-4">
             <p className="space-x-4 text-center">
                 <span className="text-foreground">hell</span>
                 <span className="text-surface">hell</span>
@@ -14,8 +21,12 @@ function App() {
                 <span className="text-selection-background">hell</span>
                 <span className="text-cursorline-background">hell</span>
             </p>
-            <h1 className="text-red-300">hello</h1>
-        </>
+
+            <Input/>
+            <form onSubmit={handleSubmit}>
+            <input value={input} onChange={(e) => setInput(e.target.value)}/>
+            </form>
+        </main>
     )
 }
 export default App;
