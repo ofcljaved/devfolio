@@ -69,12 +69,27 @@ body {
     body {
         @apply bg-background text-foreground;
     }
+
     @font-face {
         font-family: terminal;
-        font-style: normal;
         font-weight: 400;
         font-display: swap;
-        src: url(/fonts/FiraCode-Regular.ttf) format('ttf');
+        src: url('/fonts/fira-regular.woff2') format('woff2'),
+            url('/fonts/fira-regular.woff') format('woff');
+    }
+    @font-face {
+        font-family: terminal;
+        font-weight: 500;
+        font-display: swap;
+        src: url('/fonts/fira-medium.woff2') format('woff2'),
+            url('/fonts/fira-medium.woff') format('woff');
+    }
+    @font-face {
+        font-family: terminal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('/fonts/fira-bold.woff2') format('woff2'),
+            url('/fonts/fira-bold.woff') format('woff');
     }
 }
 
