@@ -2,10 +2,10 @@ import { HOST_NAME, USER } from "~/constants"
 
 export const Prompt = () => {
     return (
-        <div>
-            <span>{USER}</span>
+        <div className="text-warning font-bold">
+            <span className="text-error">{USER}</span>
             @
-            <span>{HOST_NAME}</span>
+            <span className="text-success">{HOST_NAME}</span>
             :~$
         </div>
     )
