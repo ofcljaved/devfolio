@@ -20,18 +20,18 @@ export const FakeInput = ({ input }: { input: string }) => {
 
     const userCmd = input.split(" ");
     return (
-        <div>
+        <div className="font-term">
             {!isEmpty && (
                 userCmd.map((cmd, idx) => {
                     return (
-                        <span className="text-error">
+                        <span key={idx} className="text-error">
                             {idx != 0 && " "}
                             {cmd}
                         </span>
                     )
                 })
             )}
-            <span className={cn(!isTyping && "animate-blink", "inline-block w-[1.25ch] bg-foreground")}>.</span>
+            <span className={cn(!isTyping && "animate-blink", "inline-block w-[1ch] h-[1em] align-text-bottom bg-foreground")}/>
         </div>
     )
 }
