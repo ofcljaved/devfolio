@@ -6,6 +6,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@keyframes blink {
+
+    to,
+    from {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
 @layer utilities {
     .text-balance {
         text-wrap: balance;
@@ -77,6 +89,7 @@ body {
         src: url('/fonts/fira-regular.woff2') format('woff2'),
             url('/fonts/fira-regular.woff') format('woff');
     }
+
     @font-face {
         font-family: terminal;
         font-weight: 500;
@@ -84,6 +97,7 @@ body {
         src: url('/fonts/fira-medium.woff2') format('woff2'),
             url('/fonts/fira-medium.woff') format('woff');
     }
+
     @font-face {
         font-family: terminal;
         font-weight: 700;
@@ -92,4 +106,3 @@ body {
             url('/fonts/fira-bold.woff') format('woff');
     }
 }
-

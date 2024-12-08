@@ -26,6 +26,9 @@ const config: Omit<Config, "content"> = {
       fontFamily: {
         term: ["terminal", "system-ui", ...defaultTheme.fontFamily.mono],
       },
+      animation: {
+        blink: "blink 1s step-end infinite",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
