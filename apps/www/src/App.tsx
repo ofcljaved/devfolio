@@ -1,11 +1,6 @@
-import { useState } from "react";
-import { Input } from "~/components/Input";
+import InputPrompt from "./components/InputPrompt";
 
 function App() {
-    const [input, setInput] = useState("");
-    const handleSubmit = (e) =>{
-        e.preventDefault();
-    }
     return (
         <main className="p-4">
             <p className="space-x-4 text-center">
@@ -21,11 +16,8 @@ function App() {
                 <span className="text-selection-background">hell</span>
                 <span className="text-cursorline-background">hell</span>
             </p>
+            <InputPrompt />
 
-            <Input/>
-            <form onSubmit={handleSubmit}>
-            <input value={input} onChange={(e) => setInput(e.target.value)}/>
-            </form>
         </main>
     )
 }
