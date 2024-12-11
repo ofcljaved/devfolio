@@ -1,7 +1,7 @@
 export const COMMANDS = ["help", "echo", "whoami"] as const;
 export type COMMAND_TYPE = (typeof COMMANDS)[number];
 
-type COMMANDS_HELP_TYPE = Record<
+export type COMMANDS_HELP_TYPE = Record<
   COMMAND_TYPE,
   {
     description: string,
