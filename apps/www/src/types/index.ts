@@ -1,8 +1,8 @@
 import { HELP_FLAG } from "@repo/constants";
 
-export type HelpOpt = (typeof HELP_FLAG)[number];
+export type HelpOpt = HELP_FLAG.H | HELP_FLAG.HELP | null;
 export type CmdObject = {
   cmd: string;
-  helpFlag: HelpOpt | null;
+  helpFlag: HelpOpt;
   args: string;
 };
