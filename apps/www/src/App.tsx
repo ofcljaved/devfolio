@@ -3,7 +3,7 @@ import InputPrompt from "./components/InputPrompt";
 
 function App() {
   return (
-    <main className="p-4">
+    <main className="p-4 font-term">
       <p className="space-x-4 text-center">
         <span className="text-foreground">hell</span>
         <span className="text-surface">hell</span>
