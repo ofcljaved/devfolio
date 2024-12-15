@@ -4,9 +4,9 @@ export type COMMAND_TYPE = (typeof COMMANDS)[number];
 export type COMMANDS_HELP_TYPE = Record<
   COMMAND_TYPE,
   {
-    description: string,
-    example: string,
-    shortDesc: string,
+    description: string;
+    example: string;
+    shortDesc: string;
   }
 >;
 

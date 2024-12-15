@@ -1,5 +1,5 @@
 {
-  "name": "@repo/store",
+  "name": "@repo/constants",
   "version": "0.0.0",
   "private": true,
   "exports": {
@@ -9,10 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jotai": "^2.10.3",
-    "@repo/constants": "workspace:*"
-  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*"
   }
