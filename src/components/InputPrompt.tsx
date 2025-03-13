@@ -1,0 +1,11 @@
+import { Input } from "@/components/Input";
+import { Prompt } from "@/components/Prompt";
+
+export default function InputPrompt() {
+  return (
+    <div className="flex gap-2">
+      <Prompt />
+      <Input />
+    </div>
+  );
+}

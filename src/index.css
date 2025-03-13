@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: hsl(245 50% 95%);
+  --foreground: hsl(245 22% 25%);
+  --surface: hsl(245 45% 90%);
+  --overlay: hsl(245 40% 85%);
+  --muted: hsl(245 13% 60%);
+  --subtle: hsl(245 23% 45%);
+  --cursor: hsl(2 55% 63%);
+  --error: hsl(343 76% 53%);
+  --warning: hsl(35 88% 52%);
+  --success: hsl(170 47% 43%);
+  --selection-background: hsl(245 25% 75%);
+  --cursorline-background: hsl(245 45% 90%);
+  --radius: hsl(0.05rem);
+  --border: hsl(240 3.7% 15.9%);
+}
+
+@media (prefers-color-scheme : dark) {
+  :root {
+    --background: hsl(249 22% 12%);
+    --foreground: hsl(245 50% 91%);
+    --surface: hsl(247 23% 15%);
+    --overlay: hsl(248 25% 18%);
+    --muted: hsl(247 13% 40%);
+    --subtle: hsl(244 23% 55%);
+    --cursor: hsl(3 55% 83%);
+    --error: hsl(343 76% 73%);
+    --warning: hsl(35 88% 72%);
+    --success: hsl(170 57% 73%);
+    --selection-background: hsl(249 25% 25%);
+    --cursorline-background: hsl(247 23% 15%);
+  }
+}
+
+.dark {
+  --background: hsl(249 22% 12%);
+  --foreground: hsl(245 50% 91%);
+  --surface: hsl(247 23% 15%);
+  --overlay: hsl(248 25% 18%);
+  --muted: hsl(247 13% 40%);
+  --subtle: hsl(244 23% 55%);
+  --cursor: hsl(3 55% 83%);
+  --error: hsl(343 76% 73%);
+  --warning: hsl(35 88% 72%);
+  --success: hsl(170 57% 73%);
+  --selection-background: hsl(249 25% 25%);
+  --cursorline-background: hsl(247 23% 15%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-overlay: var(--overlay);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-cursor: var(--cursor);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-selection-background: var(--selection-background);
+  --color-cursorline-background: var(--cursorline-background);
+  --color-radius: var(--radius);
+  --color-border: var(--border);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@font-face {
+  font-family: terminal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/fira-regular.woff2') format('woff2'),
+    url('/fonts/fira-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: terminal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/fira-medium.woff2') format('woff2'),
+    url('/fonts/fira-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: terminal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/fira-bold.woff2') format('woff2'),
+    url('/fonts/fira-bold.woff') format('woff');
+}
+
+@theme {
+  --font-term: 'terminal', 'monospace';
+}
+
+@theme {
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+
+    to,
+    from {
+      transform: scale(0);
+    }
+
+    50% {
+      transform: scale(1);
+    }
+  }
+
+}
