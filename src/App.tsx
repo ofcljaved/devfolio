@@ -1,5 +1,5 @@
-import CommandExecuted from "@/components/output";
-import InputPrompt from "@/components/input";
+//import CommandExecuted from "@/components/output";
+//import InputPrompt from "@/components/input";
 
 function App() {
   return (
