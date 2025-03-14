@@ -1,3 +1,5 @@
+import InputPrompt from "@/components/input/inputPrompt";
+
 function App() {
   return (
     <main className="p-4 font-term h-full overflow-y-auto">
@@ -14,6 +16,7 @@ function App() {
         <span className="text-selection-background">hell</span>
         <span className="text-cursorline-background">hell</span>
       </p>
+      <InputPrompt />
     </main>
   );
 }
