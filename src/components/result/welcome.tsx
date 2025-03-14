@@ -1,18 +1,32 @@
+import { COMMANDS, COMMANDS_HELP } from "@/commands";
+import { ShortDesc } from "../shortDesc";
+
+const desiredCommands = COMMANDS.filter(
+  (command) =>
+    command === "projects" ||
+    command === "blog" ||
+    command === "education" ||
+    command === "about"
+);
+
 export const Welcome = () => {
   return (
-    <div className="grid grid-cols-[1fr_max-content] gap-2 grid-rows-[max-content_1fr]">
+    <div className="grid grid-cols-[max-content_1fr] gap-2 grid-rows-[max-content_1fr] pb-2 text-balance">
       <Name />
       <p>
         Welcome to my interactive terminal portfolio
         <br />
         Explore my projects, latest blog post, education, and more—all with simple commands.
         <br />
+        <br />
         Try these to get started:
-        - 'projects' → See my latest work with links to dive deeper
-        - 'blog' → Read my thoughts and updates
-        - 'education' → Check out my academic journey
-        - 'about' → Learn more about me
+        <div className="py-2">
+          {desiredCommands.map((command) => (
+            <ShortDesc isCommand={true} cmd={command} shortDesc={COMMANDS_HELP[command].shortDesc} />
+          ))}
+        </div>
         For a full list of available commands, type 'help'.
+        <br />
         <br />
         Let’s have some fun—start typing!
       </p>
