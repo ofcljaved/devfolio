@@ -17,9 +17,9 @@ function App() {
         <span className="text-selection-background">hell</span>
         <span className="text-cursorline-background">hell</span>
       </p>
-      <CommandExecuted />
-      <InputPrompt />
     </main>
   );
 }
 export default App;
+//<CommandExecuted />
+//<InputPrompt />
