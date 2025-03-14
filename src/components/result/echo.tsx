@@ -1,3 +1,3 @@
-export const Echo = () => {
-  return <p>echo</p>;
+export const Echo = ({ args }: { args: string }) => {
+  return <p>{args}</p>;
 };

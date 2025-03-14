@@ -3,6 +3,7 @@ import { Echo } from "./echo";
 import { Help } from "./help";
 import { Welcome } from "./welcome";
 import { Whoami } from "./whoami";
+import { Hostname } from "./hostname";
 
 const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   help: Help,
@@ -13,6 +14,7 @@ const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   blog: Whoami,
   education: Whoami,
   about: Whoami,
+  hostname: Hostname,
 };
 
 interface CommandResultProps {
