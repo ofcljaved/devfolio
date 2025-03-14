@@ -1,4 +1,5 @@
 import InputPrompt from "@/components/input/inputPrompt";
+import CommandExecuted from "@/components/output/commandExecuted";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <span className="text-selection-background">hell</span>
         <span className="text-cursorline-background">hell</span>
       </p>
+      <CommandExecuted />
       <InputPrompt />
     </main>
   );
