@@ -1,5 +1,5 @@
 import { COMMAND_TYPE, COMMANDS, COMMANDS_HELP } from "@/commands";
-import { CommandResult } from "./commandResult";
+import { CommandResult } from "./CommandResult";
 import { HELP_FLAG } from "@/constants";
 import { CmdObject } from "@/types";
 

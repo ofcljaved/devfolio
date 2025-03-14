@@ -1,6 +1,6 @@
 import { DELIMITER } from "@/constants";
 import { useEffect, useState } from "react";
-import { Command } from "@/components/command";
+import { Command } from "@/components/Command";
 import { cn } from "@/lib/utils";
 
 export const FakeInput = ({ input }: { input: string }) => {

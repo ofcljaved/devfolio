@@ -1,1 +1,1 @@
-export { default } from "./inputPrompt";
+export { default } from "./InputPrompt";

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FakeInput } from "./fakeInput";
+import { FakeInput } from "./FakeInput";
 import { useSetAtom } from "jotai";
 import { commandHistory } from "@/store/atoms/commandHistory";
 

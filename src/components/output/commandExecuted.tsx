@@ -2,10 +2,10 @@ import { formatInputToCommand } from "@/lib/formatInputToCommand";
 import { commandHistory } from "@/store/atoms/commandHistory";
 import { useAtomValue } from "jotai";
 import React from "react";
-import { Prompt } from "@/components/prompt";
-import { Command } from "@/components/command";
-import { Output } from "./output";
+import { Prompt } from "@/components/Prompt";
+import { Command } from "@/components/Command";
 import { DELIMITER } from "@/constants";
+import { Output } from "./Output";
 
 const CommandExecuted = () => {
   const command = useAtomValue(commandHistory);
