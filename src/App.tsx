@@ -1,6 +1,3 @@
-//import CommandExecuted from "@/components/output";
-//import InputPrompt from "@/components/input";
-
 function App() {
   return (
     <main className="p-4 font-term h-full overflow-y-auto">
@@ -21,5 +18,3 @@ function App() {
   );
 }
 export default App;
-//<CommandExecuted />
-//<InputPrompt />
