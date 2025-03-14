@@ -1,5 +1,5 @@
 import React from "react";
-import result from "./result";
+import result from "@/components/result";
 import { COMMAND_TYPE } from "@/commands";
 
 interface CommandResultProps {

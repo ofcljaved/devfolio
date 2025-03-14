@@ -109,17 +109,11 @@
 }
 
 @theme {
-  --animate-blink: blink 1s step-end infinite;
+  --animate-blink: blink 1s linear infinite;
 
   @keyframes blink {
-
-    to,
-    from {
-      transform: scale(0);
-    }
-
     50% {
-      transform: scale(1);
+      opacity: 0;
     }
   }
 

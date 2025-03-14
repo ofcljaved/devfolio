@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { FakeInput } from "@/components/FakeInput";
+import { FakeInput } from "./fakeInput";
 import { useSetAtom } from "jotai";
 import { commandHistory } from "@/store/atoms/commandHistory";
 
@@ -7,33 +7,47 @@ export const Input = () => {
   const setCommandHistory = useSetAtom(commandHistory);
   const [input, setInput] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   function focusInput() {
     inputRef.current?.focus();
   }
 
   function scrollInputIntoView() {
-    inputRef.current?.scrollIntoView();
+    formRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setCommandHistory((prev) => [...prev, input]);
     setInput("");
-    scrollInputIntoView();
+    setTimeout(scrollInputIntoView, 0);
   };
 
   useEffect(() => {
-    if (!inputRef.current) return;
+    if (!inputRef.current || !formRef.current) return;
 
-    window.addEventListener("click", focusInput);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          focusInput();
+        }
+      },
+      { root: null, threshold: 0.1 }
+    );
+
+    observer.observe(formRef.current);
+
+    window.addEventListener("click", scrollInputIntoView);
     return () => {
-      window.removeEventListener("click", focusInput);
+      observer.disconnect();
+      window.removeEventListener("click", scrollInputIntoView);
     };
   }, []);
 
   return (
-    <form onSubmit={handleSubmit} className="relative flex-1">
+    <form ref={formRef} onSubmit={handleSubmit} className="relative flex-1">
       <FakeInput input={input} />
       <input
         ref={inputRef}

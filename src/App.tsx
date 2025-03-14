@@ -1,9 +1,9 @@
-import { CommandExecuted } from "@/components/CommandExecuted";
-import InputPrompt from "@/components/InputPrompt";
+import CommandExecuted from "@/components/output";
+import InputPrompt from "@/components/input";
 
 function App() {
   return (
-    <main className="p-4 font-term">
+    <main className="p-4 font-term h-full overflow-y-auto">
       <p className="space-x-4 text-center">
         <span className="text-foreground">hell</span>
         <span className="text-surface">hell</span>

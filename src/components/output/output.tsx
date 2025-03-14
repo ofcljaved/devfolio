@@ -1,5 +1,5 @@
 import { COMMAND_TYPE, COMMANDS, COMMANDS_HELP } from "@/commands";
-import { CommandResult } from "@/components/CommandResult";
+import { CommandResult } from "./commandResult";
 import { HELP_FLAG } from "@/constants";
 import { CmdObject } from "@/types";
 
@@ -8,6 +8,7 @@ const isValidCmd = (cmd: string): cmd is COMMAND_TYPE => {
 };
 
 export const Output = ({ cmdObject }: { cmdObject: CmdObject }) => {
+  console.log(cmdObject);
   if (!cmdObject.cmd.length) return;
 
   if (!isValidCmd(cmdObject.cmd)) {
@@ -15,6 +16,10 @@ export const Output = ({ cmdObject }: { cmdObject: CmdObject }) => {
       <p className="pb-2">
         <span className="text-cursor font-semibold">{cmdObject.cmd}</span>:
         command not found
+        <br />
+        <span>Type '</span>
+        <span className="text-cursor">help</span>
+        <span>' for a list of available commands</span>
       </p>
     );
   }

@@ -1,5 +1,5 @@
-import { Input } from "@/components/Input";
-import { Prompt } from "@/components/Prompt";
+import { Input } from "./input";
+import { Prompt } from "@/components/prompt";
 
 export default function InputPrompt() {
   return (

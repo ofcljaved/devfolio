@@ -2,12 +2,12 @@ import { formatInputToCommand } from "@/lib/formatInputToCommand";
 import { commandHistory } from "@/store/atoms/commandHistory";
 import { useAtomValue } from "jotai";
 import React from "react";
-import { Prompt } from "@/components/Prompt";
-import { Command } from "@/components/Command";
-import { Output } from "@/components/Output";
+import { Prompt } from "@/components/prompt";
+import { Command } from "@/components/command";
+import { Output } from "./output";
 import { DELIMITER } from "@/constants";
 
-export const CommandExecuted = () => {
+const CommandExecuted = () => {
   const command = useAtomValue(commandHistory);
   return command.map((cmd, idx) => {
     const cmdObject = formatInputToCommand(cmd);
@@ -22,3 +22,5 @@ export const CommandExecuted = () => {
     );
   });
 };
+
+export default CommandExecuted;
