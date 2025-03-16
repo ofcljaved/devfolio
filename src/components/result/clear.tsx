@@ -9,5 +9,5 @@ export const Clear = () => {
     setCommandHistory([]);
   }, []);
 
-  return;
+  return <></>;
 };
