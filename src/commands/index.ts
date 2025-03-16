@@ -1,4 +1,4 @@
-export const COMMANDS = ["help", "echo", "whoami", "welcome", "projects", "blog", "education", "about", "hostname"] as const;
+export const COMMANDS = ["help", "echo", "whoami", "welcome", "projects", "blog", "education", "about", "hostname", "clear"] as const;
 export type COMMAND_TYPE = (typeof COMMANDS)[number];
 
 export type COMMANDS_HELP_TYPE = Record<
@@ -54,5 +54,10 @@ export const COMMANDS_HELP: COMMANDS_HELP_TYPE = {
     description: "Shows the hostname of this terminal.\r\nUseful for checking what url you’re on.",
     example: "hostname : Outputs like terminal.ofcljaved.dev",
     shortDesc: "Shows the hostname",
+  },
+  clear: {
+    description: "Clears the command history.\r\nUseful for resetting the terminal.",
+    example: "clear : Clears the command history",
+    shortDesc: "Clears the command history",
   },
 };
