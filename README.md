@@ -2,7 +2,7 @@
 
 ## Things to do
 
-[]  Add up and down arrow keys to navigate through command history
+[x]  Add up and down arrow keys to navigate through command history
 
 - Commands to add
   [x]  whoami

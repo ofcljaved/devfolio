@@ -33,7 +33,7 @@ export const Welcome = () => {
 };
 
 const Name = () => {
-  return <pre className="text-[10px]">{`
+  return <pre className="text-[10px] font-[revert]">{`
        ▄█    ▄████████  ▄█    █▄     ▄████████ ████████▄ 
       ███   ███    ███ ███    ███   ███    ███ ███   ▀███
       ███   ███    ███ ███    ███   ███    █▀  ███    ███
