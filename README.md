@@ -5,22 +5,20 @@
 []  Add up and down arrow keys to navigate through command history
 
 - Commands to add
- []]  whoami
- []]  projects
- []]  blog
- []]  education
- []]  about
- [x]]  hostname
- [x]]  help
- [x]]  echo
- [x]]  welcome
- [x]]  clear
- []]  socials
- []]  history
- []]  gui
+  [x]  whoami
+  []  projects
+  []  blog
+  []  education
+  []  about
+  [x]  hostname
+  [x]  help
+  [x]  echo
+  [x]  welcome
+  [x]  clear
+  []  socials
+  []  history
+  []  gui
 
 - Addtional features
- []] curl command to fetch data from the internet
- []] history saves in local storage
-
-
+  [] curl command to fetch data from the internet
+  [] history saves in local storage

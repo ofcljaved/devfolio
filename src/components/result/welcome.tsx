@@ -11,25 +11,22 @@ const desiredCommands = COMMANDS.filter(
 
 export const Welcome = () => {
   return (
-    <div className="grid grid-cols-[max-content_1fr] gap-2 grid-rows-[max-content_1fr] pb-2 text-balance">
+    <div className="grid grid-cols-[1fr_max_content] gap-2 grid-rows-[max-content_1fr] text-balance">
       <Name />
-      <p>
-        Welcome to my interactive terminal portfolio
+      <div className="text-balance">
+        <p>Welcome to my interactive terminal portfolio</p>
+        <p>Explore my projects, latest blog post, education, and more—all with simple commands.</p>
         <br />
-        Explore my projects, latest blog post, education, and more—all with simple commands.
-        <br />
-        <br />
-        Try these to get started:
+        <p>Try these to get started:</p>
         <div className="py-2">
           {desiredCommands.map((command) => (
-            <ShortDesc isCommand={true} cmd={command} shortDesc={COMMANDS_HELP[command].shortDesc} />
+            <ShortDesc key={command} isCommand={true} cmd={command} shortDesc={COMMANDS_HELP[command].shortDesc} />
           ))}
         </div>
-        For a full list of available commands, type 'help'.
+        <p>For a full list of available commands, type 'help'.</p>
         <br />
-        <br />
-        Let’s have some fun—start typing!
-      </p>
+        <p>Let’s have some fun—start typing!</p>
+      </div>
       <Pfp />
     </div>
   )

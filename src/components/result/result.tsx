@@ -26,5 +26,7 @@ interface CommandResultProps {
 
 export const CommandResult: React.FC<CommandResultProps> = ({ cmd, args }) => {
   const Comp = result[cmd];
-  return <Comp args={args} />;
+  return <div className="pb-2 max-w-7xl">
+    <Comp args={args} />
+  </div>;
 };

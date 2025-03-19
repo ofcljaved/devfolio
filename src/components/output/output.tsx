@@ -8,7 +8,6 @@ const isValidCmd = (cmd: string): cmd is COMMAND_TYPE => {
 };
 
 export const Output = ({ cmdObject }: { cmdObject: CmdObject }) => {
-  console.log(cmdObject);
   if (!cmdObject.cmd.length) return;
 
   if (!isValidCmd(cmdObject.cmd)) {

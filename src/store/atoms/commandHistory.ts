@@ -1,3 +1,3 @@
 import { atom } from "jotai";
 
-export const commandHistory = atom<string[]>(["welcome"]);
+export const commandHistoryAtom = atom<string[]>(["welcome"]);

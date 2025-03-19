@@ -78,6 +78,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  pre {
+    @apply font-term;
+  }
 }
 
 @font-face {

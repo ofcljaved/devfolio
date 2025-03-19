@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FakeInput } from "./fakeInput";
-import { useSetAtom } from "jotai";
-import { commandHistory } from "@/store/atoms/commandHistory";
+import { useAtom } from "jotai";
+import { commandHistoryAtom } from "@/store/atoms/commandHistory";
 
 function isElementInViewport(element: HTMLElement) {
   const rect = element.getBoundingClientRect();
@@ -16,8 +16,9 @@ function isElementInViewport(element: HTMLElement) {
 }
 
 export const Input = () => {
-  const setCommandHistory = useSetAtom(commandHistory);
+  const [commandHistory, setCommandHistory] = useAtom(commandHistoryAtom);
   const [input, setInput] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
 
   function focusInput() {
@@ -47,12 +48,18 @@ export const Input = () => {
     e.preventDefault();
     setCommandHistory((prev) => [...prev, input]);
     setInput("");
+    setCurrentIndex(-1);
     setTimeout(scrollInputIntoView, 0);
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.ctrlKey && e.code === "KeyL") {
+      e.preventDefault();
       setCommandHistory([]);
+    }
+    if (["ArrowUp", "ArrowDown"].includes(e.code)) {
+      e.preventDefault();
+      console.log(commandHistory, e.code);
     }
   };
   useEffect(() => {
