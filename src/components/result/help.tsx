@@ -15,7 +15,11 @@ const instruction = [
     value: "to navigate through the command history",
   }
 ]
-export const Help = () => {
+export const Help = ({ args }: { args: string }) => {
+  if (args.trim().length) {
+    return <p>Usage: help</p>;
+  };
+
   return (
     <div className="py-4">
       {Object.entries(COMMANDS_HELP).map(([cmd, { shortDesc }]) => (

@@ -7,6 +7,7 @@ import { Hostname } from "./hostname";
 import { Clear } from "./clear";
 import { History } from "./history";
 import { Gui } from "./gui";
+import { Socials } from "./socials";
 
 const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   help: Help,
@@ -21,6 +22,7 @@ const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   clear: Clear,
   history: History,
   gui: Gui,
+  socials: Socials,
 };
 
 interface CommandResultProps {

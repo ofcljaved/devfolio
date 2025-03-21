@@ -1,6 +1,6 @@
 import { GUI_URL } from "@/constants";
 
-export const COMMANDS = ["help", "echo", "whoami", "welcome", "projects", "blog", "education", "about", "hostname", "clear", "history", "gui"] as const;
+export const COMMANDS = ["help", "echo", "whoami", "welcome", "projects", "blog", "education", "about", "hostname", "clear", "history", "gui", "socials"] as const;
 export type COMMAND_TYPE = (typeof COMMANDS)[number];
 
 export type COMMANDS_HELP_TYPE = Record<
@@ -71,5 +71,10 @@ export const COMMANDS_HELP: COMMANDS_HELP_TYPE = {
     description: "Navigates you to the graphical interface of the portfolio.\r\nFor those who prefer a more visual experience.",
     example: `gui : Opening ${GUI_URL}...`,
     shortDesc: "Opens the gui portfolio",
+  },
+  socials: {
+    description: "Shows links to my social media profiles.\r\nYou can connect with me on the web!",
+    example: "socials : Here are my social media profiles ...",
+    shortDesc: "Shows links to my socials",
   },
 };

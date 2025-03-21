@@ -9,7 +9,11 @@ const desiredCommands = COMMANDS.filter(
     command === "about"
 );
 
-export const Welcome = () => {
+export const Welcome = ({ args }: { args: string }) => {
+  if (args.trim().length) {
+    return <p>Usage: welcome</p>;
+  };
+
   return (
     <div className="grid grid-cols-[1fr_max_content] gap-2 grid-rows-[max-content_1fr] text-balance">
       <Name />
