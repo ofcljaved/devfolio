@@ -1,4 +1,6 @@
-export const COMMANDS = ["help", "echo", "whoami", "welcome", "projects", "blog", "education", "about", "hostname", "clear"] as const;
+import { GUI_URL } from "@/constants";
+
+export const COMMANDS = ["help", "echo", "whoami", "welcome", "projects", "blog", "education", "about", "hostname", "clear", "history", "gui"] as const;
 export type COMMAND_TYPE = (typeof COMMANDS)[number];
 
 export type COMMANDS_HELP_TYPE = Record<
@@ -59,5 +61,15 @@ export const COMMANDS_HELP: COMMANDS_HELP_TYPE = {
     description: "Clears the command history.\r\nUseful for resetting the terminal.",
     example: "clear : Clears the command history",
     shortDesc: "Clears the command history",
+  },
+  history: {
+    description: "Displays the command history.\r\nUseful for checking what commands you’ve used recently.",
+    example: "history : Displays the command history",
+    shortDesc: "Shows the command history",
+  },
+  gui: {
+    description: "Navigates you to the graphical interface of the portfolio.\r\nFor those who prefer a more visual experience.",
+    example: `gui : Opening ${GUI_URL}...`,
+    shortDesc: "Opens the gui portfolio",
   },
 };
