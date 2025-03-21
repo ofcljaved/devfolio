@@ -5,6 +5,8 @@ import { Welcome } from "./welcome";
 import { Whoami } from "./whoami";
 import { Hostname } from "./hostname";
 import { Clear } from "./clear";
+import { History } from "./history";
+import { Gui } from "./gui";
 
 const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   help: Help,
@@ -17,6 +19,8 @@ const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   about: Whoami,
   hostname: Hostname,
   clear: Clear,
+  history: History,
+  gui: Gui,
 };
 
 interface CommandResultProps {

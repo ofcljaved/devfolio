@@ -7,7 +7,7 @@ export const Clear = () => {
 
   useEffect(() => {
     setCommandHistory([]);
-  }, []);
+  }, [setCommandHistory]);
 
   return <></>;
 };

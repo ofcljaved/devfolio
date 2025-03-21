@@ -16,8 +16,8 @@
   - [x]  welcome
   - [x]  clear
   - [ ]  socials
-  - [ ]  history
-  - [ ]  gui
+  - [x]  history
+  - [x]  gui
 
 - Addtional features
   - [ ] curl command to fetch data from the internet

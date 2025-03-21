@@ -6,3 +6,4 @@ export enum HELP_FLAG {
 }
 export const USER = "viewer";
 export const hostname = () => window.location.hostname;
+export const GUI_URL = "https://ofcljaved.com";

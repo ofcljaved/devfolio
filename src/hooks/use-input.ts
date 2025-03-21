@@ -12,7 +12,7 @@ export const useInput = () => {
   const commandHistoryRef = useRef(commandHistory);
 
   useEffect(() => {
-    commandHistoryRef.current = commandHistory;
+    commandHistoryRef.current = commandHistory.filter(cmd => cmd.length);
   }, [commandHistory]);
 
   function focusInput() {
