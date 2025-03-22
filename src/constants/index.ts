@@ -30,3 +30,24 @@ export const SOCIALS = [
     id: 4,
   },
 ];
+
+export const PROJECTS = [
+  {
+    name: "Cashboard",
+    description: "A simple and intuitive expense management app for your budget.\r\nWith dashboards, reports and goals",
+    url: "https://cashboard.ofcljaved.com",
+    id: 1,
+  },
+  {
+    name: "Sniphub",
+    description: "Alternative to GitHub Gists.\r\nGitHub Gists are great, but sometimes you just need a quick snippet.",
+    url: "https://sniphub.ofcljaved.com",
+    id: 2,
+  },
+  {
+    name: "Gitfork",
+    description: "In order to judge people by their Github profile,\r\nYou can use this and look thier repositories and forks.",
+    url: "https://gitfork.ofcljaved.com",
+    id: 3,
+  },
+]

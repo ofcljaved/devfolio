@@ -35,7 +35,7 @@ export const COMMANDS_HELP: COMMANDS_HELP_TYPE = {
   projects: {
     description: "Lists my latest projects with clickable links to explore them further.\r\nDive into what I’ve been building!",
     example: "projects : Displays project names and links",
-    shortDesc: "See my latest work with links",
+    shortDesc: "See my latest work",
   },
   blog: {
     description: "Shows the heading of my latest blog post with a clickable link to read more on my blog site.\r\nStay updated with my thoughts!",

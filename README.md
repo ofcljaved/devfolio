@@ -6,7 +6,7 @@
 
 - Commands to add
   - [x]  whoami
-  - [ ]  projects
+  - [x]  projects
   - [ ]  blog
   - [ ]  education
   - [ ]  about

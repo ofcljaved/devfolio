@@ -8,13 +8,13 @@ import { Clear } from "./clear";
 import { History } from "./history";
 import { Gui } from "./gui";
 import { Socials } from "./socials";
+import { Projects } from "./projects";
 
 const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   help: Help,
   echo: Echo,
   whoami: Whoami,
   welcome: Welcome,
-  projects: Whoami,
   blog: Whoami,
   education: Whoami,
   about: Whoami,
@@ -23,6 +23,7 @@ const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   history: History,
   gui: Gui,
   socials: Socials,
+  projects: Projects,
 };
 
 interface CommandResultProps {
