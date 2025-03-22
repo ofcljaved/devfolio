@@ -15,7 +15,7 @@
   - [x]  echo
   - [x]  welcome
   - [x]  clear
-  - [ ]  socials
+  - [x]  socials
   - [x]  history
   - [x]  gui
 
