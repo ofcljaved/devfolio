@@ -8,8 +8,8 @@
   - [x]  whoami
   - [x]  projects
   - [x]  blog
-  - [ ]  education
-  - [ ]  about
+  - [x]  education
+  - [x]  about
   - [x]  hostname
   - [x]  help
   - [x]  echo

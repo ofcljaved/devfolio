@@ -11,6 +11,7 @@ import { Socials } from "./socials";
 import { Projects } from "./projects";
 import { Blogs } from "./blog";
 import { Education } from "./education";
+import { About } from "./about";
 
 const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   help: Help,
@@ -19,7 +20,7 @@ const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   welcome: Welcome,
   blog: Blogs,
   education: Education,
-  about: Whoami,
+  about: About,
   hostname: Hostname,
   clear: Clear,
   history: History,
