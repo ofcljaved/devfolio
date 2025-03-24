@@ -23,11 +23,11 @@ export const Help = ({ args }: { args: string }) => {
   return (
     <div className="py-4">
       {Object.entries(COMMANDS_HELP).map(([cmd, { shortDesc }]) => (
-        <ShortDesc isCommand={true} cmd={cmd} shortDesc={shortDesc} />
+        <ShortDesc key={cmd} isCommand={true} cmd={cmd} shortDesc={shortDesc} />
       ))}
       <div className="mt-4">
         {instruction.map(({ key, value }) => (
-          <ShortDesc cmd={key} shortDesc={value} />
+          <ShortDesc key={key} cmd={key} shortDesc={value} />
         ))}
       </div>
     </div>

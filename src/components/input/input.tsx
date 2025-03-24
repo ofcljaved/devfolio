@@ -3,7 +3,7 @@ import { FakeInput } from "./fakeInput";
 
 
 export const Input = () => {
-  const { input, setInput, handleSubmit, inputRef } = useInput();
+  const { input, setInput, handleSubmit, inputRef, suggestions } = useInput();
 
   return (
     <form onSubmit={handleSubmit} className="relative flex-1">
@@ -15,6 +15,11 @@ export const Input = () => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
+      <div className="flex gap-4 text-subtle">
+        {suggestions.map((suggestion, index) => (
+          <p key={index}>{suggestion}</p>
+        ))}
+      </div>
     </form>
   );
 };
