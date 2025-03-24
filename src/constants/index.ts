@@ -71,3 +71,10 @@ export const BLOGS = [
     id: 3,
   },
 ]
+
+export const EDUCATION = [
+  {
+    name: "B.Sc (Prog) in Computer Science",
+    description: "Delhi University | 2019-2022",
+  },
+]
