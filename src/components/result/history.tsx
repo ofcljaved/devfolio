@@ -1,8 +1,9 @@
 import { commandHistoryAtom } from "@/store/atoms/commandHistory";
-import { useAtomValue } from "jotai";
+import { useStore } from "jotai";
 
 export const History = ({ args }: { args: string }) => {
-  const commandHistory = useAtomValue(commandHistoryAtom);
+  const store = useStore();
+  const commandHistory = store.get(commandHistoryAtom);
 
   if (args.trim().length) {
     return <p>Usage: history</p>;
