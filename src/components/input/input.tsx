@@ -14,6 +14,7 @@ export const Input = () => {
         className="absolute top-0 text-transparent bg-transparent outline-none"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        aria-label="Terminal input"
       />
       <div className="flex gap-4 text-subtle">
         {suggestions.map((suggestion, index) => (
