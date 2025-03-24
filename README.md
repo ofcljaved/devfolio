@@ -7,7 +7,7 @@
 - Commands to add
   - [x]  whoami
   - [x]  projects
-  - [ ]  blog
+  - [x]  blog
   - [ ]  education
   - [ ]  about
   - [x]  hostname

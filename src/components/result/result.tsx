@@ -9,13 +9,14 @@ import { History } from "./history";
 import { Gui } from "./gui";
 import { Socials } from "./socials";
 import { Projects } from "./projects";
+import { Blogs } from "./blog";
 
 const result: Record<COMMAND_TYPE, React.ComponentType<{ args: string }>> = {
   help: Help,
   echo: Echo,
   whoami: Whoami,
   welcome: Welcome,
-  blog: Whoami,
+  blog: Blogs,
   education: Whoami,
   about: Whoami,
   hostname: Hostname,
